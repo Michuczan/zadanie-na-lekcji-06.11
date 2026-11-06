@@ -49,16 +49,20 @@ public class MainActivity extends AppCompatActivity {
         buttonWstecz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                aktuanyObraz--;
-                imageView.setImageResource(obrazki.get(aktuanyObraz));
+                if (aktuanyObraz > obrazki.size()) {
+                    aktuanyObraz--;
+                    imageView.setImageResource(obrazki.get(aktuanyObraz));
+                }
             }
         });
 
         buttonNastepny.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                aktuanyObraz++;
-                imageView.setImageResource(obrazki.get(aktuanyObraz));
+                if(aktuanyObraz < obrazki.size()) {
+                    aktuanyObraz++;
+                    imageView.setImageResource(obrazki.get(aktuanyObraz));
+                }
             }
         });
     }

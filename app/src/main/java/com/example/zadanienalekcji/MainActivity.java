@@ -1,6 +1,7 @@
 package com.example.zadanienalekcji;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,10 +15,10 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     protected ImageView imageView;
-
-    protected Button button, button2, button3;
-
+    protected Button buttonWstecz, buttonLosuj, buttonNastepny;
+    int aktuanyObraz = 0;
     protected TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,5 +29,11 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        imageView = findViewById(R.id.imageView3);
+        buttonWstecz = findViewById(R.id.buttonWstecz);
+        buttonLosuj = findViewById(R.id.buttonLosuj);
+        buttonNastepny = findViewById(R.id.buttonNastepny);
+        textView = findViewById(R.id.textView2);
+
     }
 }

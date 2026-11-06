@@ -22,7 +22,7 @@
         >
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonWstecz"
             android:layout_width="138dp"
             android:layout_height="70dp"
             android:text="wstecz"
@@ -31,7 +31,7 @@
             android:textColor="@color/black"/>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonLosuj"
             android:layout_width="138dp"
             android:layout_height="72dp"
             android:text="losuj"
@@ -40,7 +40,7 @@
             android:textColor="@color/black"/>
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/buttonNastepny"
             android:layout_width="138dp"
             android:layout_height="70dp"
             android:text="następny"

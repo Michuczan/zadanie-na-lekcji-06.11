@@ -12,12 +12,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     protected ImageView imageView;
     protected Button buttonWstecz, buttonLosuj, buttonNastepny;
     int aktuanyObraz = 0;
     protected TextView textView;
+    ArrayList<Integer> obrazki;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,21 @@ public class MainActivity extends AppCompatActivity {
         buttonLosuj = findViewById(R.id.buttonLosuj);
         buttonNastepny = findViewById(R.id.buttonNastepny);
         textView = findViewById(R.id.textView2);
+        obrazki = new ArrayList<>();
+        obrazki.add(R.drawable.porsche);
+        obrazki.add(R.drawable.centenario);
+        obrazki.add(R.drawable.chiron);
+        obrazki.add(R.drawable.merc);
+        obrazki.add(R.drawable.veyron);
 
+
+
+        buttonWstecz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                aktuanyObraz--;
+                imageView.setImageResource(R.drawable.porsche);
+            }
+        });
     }
 }
